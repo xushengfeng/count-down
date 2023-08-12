@@ -111,6 +111,14 @@ function createMainWindow() {
                 isIgnoreMouseEvents = !isIgnoreMouseEvents;
             },
         },
+        { type: "separator" },
+        {
+            label: "dev",
+            type: "normal",
+            click: () => {
+                mainWindow.webContents.openDevTools();
+            },
+        },
         {
             label: "退出",
             click: () => {
