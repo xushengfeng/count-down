@@ -18,7 +18,7 @@ if (!isFirstInstance) {
 }
 
 app.commandLine.appendSwitch("enable-experimental-web-platform-features", "enable");
-app.commandLine.appendSwitch("disable-web-security");
+app.commandLine.appendSwitch("no-sandbox");
 
 app.whenReady().then(() => {
     createMainWindow();
