@@ -27,6 +27,11 @@
     --o-padding: 8px;
 }
 
+@font-face {
+    font-family: "MITYPE";
+    src: url("../assets/Mitype-Medium.otf");
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bar-bg: rgba(0, 0, 0, var(--alpha));
@@ -260,4 +265,16 @@ details {
     text-shadow: 0 0 2px #fff;
     font-weight: bolder;
     font-size: 1.2rem;
+}
+#main > div > div > :nth-child(1) {
+    font-size: 0.8rem;
+}
+#main > div > div > :nth-child(2)::after {
+    content: ": ";
+}
+#main .num {
+    font-family: MITYPE;
+}
+#main .sy {
+    opacity: 0.8;
 }

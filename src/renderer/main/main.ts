@@ -1,9 +1,24 @@
 /// <reference types="vite/client" />
 
+var markdd = [["高考", "2024-6-7"]];
+
 var today = new Date(); //获得当前日期
 var tt = today.getTime();
 var beforeText = "";
 const mainEl = document.getElementById("main");
+
+function num(s: string) {
+    let span = document.createElement("span");
+    span.classList.add("num");
+    span.innerText = s;
+    return span;
+}
+function sy(s: string) {
+    let span = document.createElement("span");
+    span.classList.add("sy");
+    span.innerText = s;
+    return span;
+}
 
 function showCDD() {
     //倒数日
@@ -18,9 +33,10 @@ function showCDD() {
             m = String(Math.floor((leftTime / 1000 / 60) % 60) + 1);
             s = String(Math.floor((leftTime / 1000) % 60));
             ms = String(Math.floor(leftTime % 1000));
-            ms.padStart(4, "0");
-            s.padStart(2, "0");
-            m.padStart(2, "0");
+            h = h.padStart(2, "0");
+            ms = ms.padStart(4, "0");
+            s = s.padStart(2, "0");
+            m = m.padStart(2, "0");
         }
         let div = document.createElement("div");
         if (d != undefined) {
@@ -29,7 +45,7 @@ function showCDD() {
             let b = document.createElement("span");
             b.innerText = text;
             let c = document.createElement("span");
-            c.innerText = d;
+            c.append(num(d), sy(":"), num(h));
             div.append(a, b, c);
         }
         return div;
@@ -43,8 +59,6 @@ function showCDD() {
     }
     return div;
 }
-
-var markdd = [["高考", "2024-6-7"]];
 
 function reflash() {
     today = new Date();
