@@ -22,19 +22,23 @@ function showCDD() {
             s.padStart(2, "0");
             m.padStart(2, "0");
         }
+        let div = document.createElement("div");
         if (d != undefined) {
-            return "距离" + text + "：" + d;
-        } else {
-            return "";
+            let a = document.createElement("span");
+            a.innerText = "距离";
+            let b = document.createElement("span");
+            b.innerText = text;
+            let c = document.createElement("span");
+            c.innerText = d;
+            div.append(a, b, c);
         }
+        return div;
     }
 
     let div = document.createElement("div");
     for (let i in markdd) {
         if (markdd[i][0] != undefined) {
-            let it = document.createElement("div");
-            it.innerText = fInShowCDD(tt, markdd[i][0], markdd[i][1]);
-            div.append(it);
+            div.append(fInShowCDD(tt, markdd[i][0], markdd[i][1]));
         }
     }
     return div;

@@ -257,7 +257,7 @@ details {
     -webkit-app-region: drag;
 }
 #main > div > div {
-    -webkit-text-stroke: 0.5px #fff;
+    text-shadow: 0 0 2px #fff;
     font-weight: bolder;
     font-size: 1.2rem;
 }
