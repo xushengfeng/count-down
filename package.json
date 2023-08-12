@@ -43,6 +43,16 @@
                 "zip"
             ]
         },
+        "linux": {
+            "target": [
+                "tar.gz"
+            ]
+        },
+        "darwin": {
+            "target": [
+                "zip"
+            ]
+        },
         "nsis": {
             "oneClick": false,
             "allowToChangeInstallationDirectory": true
