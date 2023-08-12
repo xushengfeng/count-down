@@ -58,6 +58,8 @@ function rendererPath(window: BrowserWindow | Electron.WebContents, fileName: st
     }
 }
 
+app.setLoginItemSettings({ openAtLogin: true });
+
 let isIgnoreMouseEvents = true;
 const width = 150;
 
