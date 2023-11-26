@@ -45,7 +45,7 @@ function showCDD() {
             let b = document.createElement("span");
             b.innerText = text;
             let c = document.createElement("span");
-            c.append(num(d), sy(":"), num(h));
+            c.append(num(d), sy(":"), num(h), sy(":"), num(m));
             div.append(a, b, c);
         }
         return div;

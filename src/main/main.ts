@@ -61,7 +61,7 @@ function rendererPath(window: BrowserWindow | Electron.WebContents, fileName: st
 app.setLoginItemSettings({ openAtLogin: true });
 
 let isIgnoreMouseEvents = true;
-const width = 150;
+const width = 180;
 
 function createMainWindow() {
     let mainWindow = new BrowserWindow({
@@ -72,7 +72,7 @@ function createMainWindow() {
         skipTaskbar: true,
         width: width,
         height: 300,
-        x: screen.getPrimaryDisplay().workAreaSize.width - width,
+        x: 0,
         y: 0,
         webPreferences: {
             nodeIntegration: true,

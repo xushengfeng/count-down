@@ -262,9 +262,9 @@ details {
     -webkit-app-region: drag;
 }
 #main > div > div {
-    text-shadow: 0 0 2px #fff;
+    text-shadow: 0 0 4px #fff;
     font-weight: bolder;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 #main > div > div > :nth-child(1) {
     font-size: 0.8rem;
